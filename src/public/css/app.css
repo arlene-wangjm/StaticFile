@@ -1,0 +1,145 @@
+.stick-header{
+	width:100%; 
+	position:fixed;
+	top:0;
+}
+.nav-bar{
+	height: 2em;
+	background-color: #2199e8;
+  color: #fefefe;
+}
+.channel{
+	height: 2em;
+	border-bottom: 1px solid #cacaca;
+	barckground-color:white;
+	transparent:none;
+}
+.channel .item{
+	float:left;
+	width:50%;
+	text-align:center
+}
+.item:first-child{
+	border-right: 1px solid #cacaca;
+}
+.media-list{
+	padding-top: 4em;
+}
+.media-object{
+	margin-top:1rem;
+}
+.media-description{
+	font-size:0.7em;
+}
+.yellow{
+	background-color: #ffae00;
+      color: #fefefe;
+}
+.star-yellow{
+	color: #ffae00;
+}
+.star-gray{
+	color: #cacaca;;
+}
+.label-left{
+	display: inline-block;
+	float: left;
+}
+.label-right{
+	display: inline-block;
+	float: right;
+}
+.padding-left-5{
+	padding-left: 0.5rem;
+}
+.footer{
+	width: 100%;
+	position:fixed;
+	bottom:0;
+	height:2.5rem;
+	background-color:white;
+}
+.footer-text{
+	font-size: 0.7rem;
+	display:block;
+}
+.footer i{
+	font-size:1.2rem;
+}
+.footer .active, .address .active{
+	color: #2199e8;
+}
+.intro{
+padding-top:2em;
+}
+.image{
+      position:relative;
+}
+.image .serial-num{
+      position:absolute;
+      display: inline-block;
+      float:right;
+      top: 0.2rem;
+      right:2.5rem;
+      color: gray;
+      font-size: 0.7rem;
+}
+.image .grade{
+      position:absolute;
+      display: inline-block;
+      left:50%;
+      bottom:0.5rem;
+      //border-bottom: 1px solid #cacaca;
+}
+.grade .badge{
+      font-size:0.7rem;
+}
+.privilege{
+      //width:100%;
+      margin:1rem 0.5rem;
+      padding-bottom:0.5rem;
+      border-bottom: 1px solid #cacaca;
+}
+.intro .description .left{
+      font-size: 0.9rem;
+      font-weight: bold;
+      color: #ffae00;
+}
+.intro .description .right{
+      font-size: 0.7rem;
+}
+.description a{
+      color: #ffae00;
+      text-decoration: underline;
+      font-weight: bold;
+}
+.description p{
+      color: #ffae00;
+      margin-top:0.5rem;
+      margin-bottom: 0.5rem;
+}
+.address{
+      position: relative;
+      background-color: #cacaca;
+      padding-top:3rem;
+      padding-bottom:3rem;
+}
+.address-detail{
+      color: #fff;
+      position: absolute;
+      vertical-align:middle;
+      padding: 0.5rem;
+      top: 0.5rem;
+      left: 0.5rem;
+      right: 0.5rem;
+      bottom:0.5rem;
+      background-color: gray;
+      opacity: 0.6;
+      filter: alpha(opacity=60); /* For IE8 and earlier */
+      font-size: 0.8rem;
+}
+.address-detail a{
+      color: #fff;
+      font-size: 0.6rem;
+      text-decoration: underline;
+}

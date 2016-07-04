@@ -6,13 +6,19 @@
     <meta name="viewport" content="initial-scale=1.0">
     <link rel="icon" type="image/png" href="/images/fidelity-logo-sq.png"/>
     <link rel="apple-touch-icon" sizes="152x152" href="/images/fidelity-logo-sq.png"/>
-    <link rel="stylesheet" href="./css/style.css?rel=@@version">
+    <!--  inject:css -->
+    <!-- endinject -->
 </head>
 <body>
 	<div class="row">
 		<div class="columns">Testing</div>
 	</div>
-	<script src="./js/bundle.js?rel=@@version"></script> 
-	<script src="./js/verdor.bundle.js?rel=@@version"></script> 
+
+	<!-- inject:verdorjs -->
+	<!-- endinject -->
+
+	<!-- inject:js -->
+	<!-- endinject -->
+	<script src="/js/app.js?rel=1.0.0"></script> 
 </body>
 </html>

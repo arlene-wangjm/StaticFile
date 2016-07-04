@@ -8,21 +8,63 @@ var definePlugin = new webpack.DefinePlugin({
 });
 
 module.exports = {
-  entry: './src/public/script/app.js',
+  entry: {
+    app: "./src/public/script/app.js",
+    vendor: [
+             "angular", 
+             "angular-route",
+             'angular-sanitize',
+             'angular-animate'
+            ],
+  },
+
   output: {
-  	path: './src/public/script/',
+  	path: './dist/script/',
     filename: 'bundle.js'       
   },
+
   module: {
     loaders: [
-      { test: /\.js$/, loader: 'babel', exclude:/(node_modules)/, query: {presets: ['es2015']}},
-      { test: /\.scss$/, loader: ["style", "css", "sass"]},
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192'} 
+      { 
+        test: /\.js$/, 
+        loader: 'babel', 
+        exclude:/(node_modules)/, 
+        query: {presets: ['es2015']}
+      }
+      // { 
+      //   test: /\.scss$/, 
+      //   loaders:[
+      //             "style", 
+      //             "css", 
+      //             "autoprefixer?browsers=last 3 versions",
+      //             "sass?outputStyle=expanded"
+      //           ]
+      // },
+      // { 
+      //   test: /\.(png|jpg)$/, 
+      //   loader: 'url-loader?limit=8192'
+      // } 
       // to confirm why use base64 URL. 當圖片大小小於 8k 時使用 base64 URL, 其餘使用直接連接到圖片的 URL
     ]
   },
+
   resolve: {
     extensions: ['', '.js', '.json', '.css'] 
   },
-  devtool: 'source-map'
+
+  devtool: 'source-map',
+
+  plugins: [ //
+        new webpack.optimize.CommonsChunkPlugin(/* chunkName= */
+        "vendor",
+        /* filename= */
+        "vendor.bundle.js"),
+        // new webpack.DefinePlugin({
+        //     'process.env': {
+        //         'NODE_ENV': JSON.stringify(process.env.NODE_ENV || 'dev')
+        //     }
+        // }),
+        new webpack.optimize.UglifyJsPlugin({minimize: true, compress: true}),
+        new webpack.optimize.DedupePlugin()
+    ]
 };

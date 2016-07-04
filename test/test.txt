@@ -1,0 +1,9 @@
+"use strict"
+var globalVar = {
+	exports: {
+		version: 1.0.0,
+		timeout: 3000
+	}
+};
+var exports = globalVar.exports;
+return globalVar.exports;

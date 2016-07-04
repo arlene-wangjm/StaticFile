@@ -11,7 +11,7 @@ var path = require('path');
 
 console.log(`APP STARTED \n********* ******* \n with the following config : \n ${JSON.stringify(app.locals.config, 4, 4)} \n`);
 
-app.use(express.static(__dirname + '/public'));
+app.use(express.static('./dist'));
 
 //TODO: this probably needs fixing!
 //app.use('/font-awesome', express.static(path.join(__dirname, '..', 'node_modules', 'font-awesome')));

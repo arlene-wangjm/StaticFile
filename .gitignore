@@ -1,1 +1,5 @@
 node_modules
+dist
+src/public/css
+src/public/fonts
+src/public/images
